@@ -1,5 +1,4 @@
-﻿@using TravelTripProject.Models.Classes
-@model List<Blog>
+﻿@model TravelTripProject.Models.Classes.BlogComment
 @{
     ViewBag.Title = "BlogDetay";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -37,7 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    @foreach (var x in Model)
+                    @foreach (var x in Model.Value1)
                     {
 
 

@@ -15,11 +15,12 @@ namespace TravelTripProject.Controllers
             var blogs = c.Blogs.ToList();
             return View(blogs);
         }
-
+        BlogComment bc = new BlogComment();
         public ActionResult BlogDetay(int id)
         {
-            var blogfind = c.Blogs.Where(x => x.ID == id).ToList();
-            return View(blogfind);
+            // var blogfind = c.Blogs.Where(x => x.ID == id).ToList();
+            bc.Value1 = c.Blogs.Where(x => x.ID == id).ToList();
+            return View(bc);
         }
     }
 }
